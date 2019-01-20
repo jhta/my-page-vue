@@ -52,4 +52,22 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  /* min-height: 100vh; */
+  width: 100wh;
+  /* box-sizing: border-box; */
+  /* font-family: 'Fira Sans', sans-serif; */
+  position: relative;
+}
+
+
+
+
+
 </style>

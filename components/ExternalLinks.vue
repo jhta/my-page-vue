@@ -38,10 +38,11 @@ export default {
 <style>
   a {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #4a4a4a;
     cursor: pointer;
     padding: 4px;
+    background: rgba(0,0,0,0.2);
 
   }
 
@@ -55,6 +56,7 @@ export default {
     display: flex;
     margin: 0;
     list-style: none;
+    justify-content: center;
   }
 
   li {
@@ -64,4 +66,12 @@ export default {
   li:last-child {
     padding-right: 0;
   }
+
+  @media (min-width: 1080px) {
+    a {
+    font-size: 1.5rem;
+    }
+  }
+
+
 </style>
