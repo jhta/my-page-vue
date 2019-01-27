@@ -1,20 +1,28 @@
 <template>
   <section class="wrapper">
-    <span class="border-top-left"></span>
+    <span class="border-top" v-if="withBorders"></span>
+    <span class="border-top-left" v-if="withBorders"></span>
     <slot></slot>
 
-    <span class="border-bottom-right"></span>
+    <span class="border-bottom" v-if="withBorders"></span>
+    <span class="border-bottom-right" v-if="withBorders"></span>
   </section>
 </template>
 
-<style>
+<script>
+export default {
+  props: ['withBorders'],
+}
+</script>
+
+<style scoped>
 .wrapper {
   margin: 0 auto;
   position: relative;
-  padding: 3rem 5rem 2rem 5rem;
+  padding: 3rem 2rem 2rem 2rem;
 }
 
-.wrapper::before {
+.border-top {
   content: '';
   position: absolute;
   top: 0;
@@ -24,7 +32,7 @@
   background: -webkit-linear-gradient(left, #00ffde, #ff9393);
 }
 
-.wrapper::after{
+.border-bottom {
   content: '';
   position: absolute;
   bottom: 0;
@@ -45,6 +53,8 @@
   background: #00ffde;
 }
 
+
+
 .border-bottom-right {
   position: absolute;
   bottom: 0;
@@ -59,7 +69,7 @@
 
 @media(min-width: 1080px) {
   .wrapper {
-    padding: 6rem 8rem 6rem;
+    padding: 6rem 4rem 6rem 4rem; 
   }
 
   .border-bottom-right {

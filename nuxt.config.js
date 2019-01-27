@@ -35,7 +35,10 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/scrollTo"],
+  plugins: [
+    { src: "~/plugins/scrollTo", ssr: false },
+    { src: "~/plugins/aos", ssr: false }
+  ],
 
   /*
    ** Nuxt.js modules
