@@ -1,6 +1,10 @@
 <template>
-  <div v-if="show" class="bar" v-bind:class="{isBlack: background === 'black'}">
-    <down-arrows v-bind:whiteArrow='whiteArrow' v-bind:whiteChilds='background === "black"'></down-arrows>
+  <div class="bar" v-bind:class="{'bg-gradient': Boolean(isGradient) }">
+    <down-arrows
+      v-bind:whiteArrow='whiteArrow'
+      v-bind:whiteChilds='background === "black"'
+      v-bind:goTo='goTo'
+    />
   </div>
 </template>
 
@@ -8,24 +12,10 @@
 import DownArrows from './DownArrows'
 
 export default {
+  props: ['whiteArrow', 'background', 'isGradient', 'goTo'],
   components: {
     DownArrows,
   },
-
-  props: ['whiteArrow', 'background'],
-
-
-  data() {
-    return {
-      show: true 
-    }
-  },
-  methods: {
-    toggleTriangle () {
-      // this.show = !this.show
-      console.log('just testing')
-    }
-  }
 }
 </script>
 
@@ -42,25 +32,23 @@ export default {
     bottom: 0;
     left: 0;
     width: 100%;
+    /* background: #ff9393; */
+  
+  }
+
+  .bg-gradient {
     background: #ff9393;
-    /* animation-name: bar; */
+    background: -webkit-linear-gradient(left, #ff9393 10% , #00ffde,  #ff9393 90%);
     animation-duration: 10s;
     animation-delay: 1s;
     animation-iteration-count: infinite;
-    background: -webkit-linear-gradient(left, #ff9393 10% , #00ffde,  #ff9393 90%);
+    /* background: -webkit-linear-gradient(left, #ff9393 10% , #00ffde,  #ff9393 90%); */
     background-size: 200% 100%;
-    /* display: flex; */
-
-     transition: all .3s ease-in-out;
-    /* justify-content: center; */
+    transition: all .3s ease-in-out;
   }
 
   .bar:hover {
     transform: scale(1.1);
-  }
-
-  .isBlack {
-    background: black;
   }
 
   @media (min-width: 1080px) {

@@ -17,6 +17,10 @@ html {
   box-sizing: border-box;
 }
 
+
+body {
+  overflow: hidden;
+}
 *,
 *:before,
 *:after {
@@ -57,12 +61,8 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   height: 100vh;
-  /* min-height: 100vh; */
   width: 100wh;
-  /* box-sizing: border-box; */
-  /* font-family: 'Fira Sans', sans-serif; */
   position: relative;
 }
 
@@ -70,8 +70,34 @@ html {
   height: 100% !important;
 }
 
+.text-center {
+  text-align: center;
+}
 
+.c-base {
+  color: #4b4b4b !important;
+}
 
+.c-white {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
 
+.c-black {
+  color: black !important;
+  -webkit-text-fill-color: black !important;
+}
+
+.font-title {
+  font-family: 'Staatliches', cursive;
+}
+
+.bg-black {
+  background: black;
+}
+
+  .text-envolve {
+    background: #4a4a4a;
+  }
 
 </style>

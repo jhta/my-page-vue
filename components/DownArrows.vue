@@ -1,5 +1,5 @@
 <template>
-  <div class="triangle-container triangle--base"  v-scroll-to="'#gradient'" v-bind:class="{'white': whiteArrow }">
+  <div class="triangle-container triangle--base"  v-scroll-to='goTo' v-bind:class="{'white': whiteArrow }">
     <span class="triangle triangle--top" v-bind:class="{'white--minus': whiteChilds}"></span>
     <span class="triangle triangle--bottom" v-bind:class="{'white--minus': whiteChilds}"></span>
   </div>
@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  props: ['whiteArrow', 'whiteChilds'],
+  props: ['whiteArrow', 'whiteChilds', 'goTo'],
 }
 </script>
 
