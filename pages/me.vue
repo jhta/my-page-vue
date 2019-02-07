@@ -4,6 +4,7 @@
     <me-second />
     <me-third />
     <sweetgreen />
+    <espn />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import MeFirst from '~/components/sections/me/first'
 import MeSecond from '~/components/sections/me/second'
 import MeThird from '~/components/sections/me/third'
 import Sweetgreen from '~/components/sections/experience/sweetgreen'
+import Espn from '~/components/sections/experience/espn'
 
 export default {
   components: {
@@ -24,6 +26,7 @@ export default {
     MeFirst,
     MeSecond,
     Sweetgreen,
+    Espn,
     MeThird,
   },
 }

@@ -1,6 +1,6 @@
 <template>
-  <section id="sweetgreen" class="section bg-salad">
-    <job-article :title="'Sweetgreen Android App'" :subtitle="'Working by MatterSupply.co'">
+  <section id="sweetgreen" class="section bg-ball">
+    <job-article :side="'right'" :title="'Sweetgreen Android App'" :subtitle="'Working by MatterSupply.co'">
             I have been working with an amazing team developing the sweetgreen android application
             using React Native as base of our development.
             We had done big challenges trying to create the best mobile user experiences, working over the common RN limit,
@@ -32,14 +32,14 @@ export default {
     JobArticle,
   },
 }
-
 </script>
-<style scoped>
 
-  .bg-salad {
-    background-image: url(https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80);
+<style scoped>
+  .bg-ball{
+    /* background-image: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80'); */
+    background-image: url('https://images.unsplash.com/photo-1498846323785-c40aafaaa4f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1858&q=80');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     padding: 0;
   }
 
