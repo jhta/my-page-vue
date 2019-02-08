@@ -28,6 +28,15 @@ body {
   margin: 0;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -57,14 +66,7 @@ body {
   background-color: #35495e;
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  width: 100wh;
-  position: relative;
-}
+
 
 .h100 {
   height: 100% !important;
@@ -99,5 +101,9 @@ body {
   .text-envolve {
     background: #4a4a4a;
   }
+
+.no-padding {
+  padding: 0 !important;
+}
 
 </style>

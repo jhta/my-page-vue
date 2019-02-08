@@ -1,7 +1,7 @@
 <template>
-  <ul>
+  <ul class='link-list'>
     <li v-for="link in links" v-bind:key="link.title">
-      <a target="_blank" :href="'https://' + link.url">{{ link.title }}</a>
+      <a class='external-link' target="_blank" :href="'https://' + link.url">{{ link.title }}</a>
     </li>
   </ul>
 </template>
@@ -36,7 +36,7 @@ export default {
 
 
 <style>
-  a {
+  .external-link {
     margin: 0;
     font-size: 1rem;
     color: #4a4a4a;
@@ -46,12 +46,12 @@ export default {
 
   }
 
-  a:hover {
+  .external-link:hover {
     background: #ff9393;
     background: -webkit-linear-gradient(left, #ff9393 , #00ffde)
   }
 
-  ul {
+  .link-list {
     padding: 0;
     display: flex;
     margin: 0;
@@ -59,16 +59,16 @@ export default {
     justify-content: center;
   }
 
-  li {
+  .link-list > li {
     padding-right: 1rem;
   }
 
-  li:last-child {
+  .link-list > li:last-child {
     padding-right: 0;
   }
 
   @media (min-width: 1080px) {
-    a {
+    .external-link {
     font-size: 1.5rem;
     }
   }

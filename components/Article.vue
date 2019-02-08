@@ -1,5 +1,6 @@
 <template>
-    <div class="article experience left" :class='side' >
+  <div class="article-wrapper" :class="{ reverse: side === 'right'}">
+    <div class="article experience" :class='side' >
       <div class="article-container">
       <wrapper v-bind:withBorders="true" class='h100'>
         <div class="job--description c-white">
@@ -18,22 +19,20 @@
       </wrapper> 
       </div>
     </div>
+    <div class="article-image" :style="{ backgroundImage: 'url('+ backgroundImage +')'}"></div>
+  </div>
 </template>
 
 <script>
+import VueTypes from 'vue-types'
 import Wrapper from '~/components/Wrapper'
 
 export default {
  props: {
-    side: {
-      default: 'left'
-    },
-    title: {
-      default: ''
-    },
-    subtitle: {
-      default: ''
-    }
+    side: VueTypes.oneOf(['left', 'right']).def('left'),
+    title: VueTypes.string,
+    subtitle: VueTypes.string, 
+    backgroundImage: VueTypes.string,
   },
   components: {
     Wrapper,
@@ -43,14 +42,6 @@ export default {
 </script>
 <style scoped>
 
-  .article.left {
-    left: 0 !important;
-  }
-
-  .article.right {
-    left: 40% !important;
-  }
-
 
   .article {
     height: 100%;
@@ -59,17 +50,39 @@ export default {
     color: white;
   }
 
+  .article-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .article-wrapper.reverse {
+    flex-direction: row-reverse;
+  }
+
   .article-container {
     padding: 2rem;
     background: black;
     height: 100%;
   }
 
+  .article-image {
+    height: 100%;
+    width: 40%;
+    background: white;
+    /* background-image: url(https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center; 
+    padding: 0;
+ 
+  }
+
   .job--title {
     font-size: 4rem;
     line-height: 2.5rem;
     border-bottom: white solid 4px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 2rem;
   }
 
@@ -77,5 +90,8 @@ export default {
     font-size: 1rem;
   }
 
+  p {
+    font-size: 1.5rem;
+  }
 </style>
 
