@@ -1,17 +1,16 @@
 <template>
   <section class="wrapper">
     <span class="border-top" v-if="withBorders"></span>
-    <span class="border-top-left" v-if="withBorders"></span>
+    <span class="border-top-left" :class="{hideResponsive: planeResponsive}" v-if="withBorders"></span>
     <slot></slot>
-
     <span class="border-bottom" v-if="withBorders"></span>
-    <span class="border-bottom-right" v-if="withBorders"></span>
+    <span class="border-bottom-right" :class="{hideResponsive: planeResponsive}" v-if="withBorders"></span>
   </section>
 </template>
 
 <script>
 export default {
-  props: ['withBorders'],
+  props: ['withBorders', 'planeResponsive'],
 }
 </script>
 
@@ -19,7 +18,7 @@ export default {
 .wrapper {
   margin: 0 auto;
   position: relative;
-  padding: 3rem 2rem 2rem 2rem;
+  padding: 2rem 1rem 1rem 1rem;
 }
 
 .border-top {
@@ -66,6 +65,10 @@ export default {
   /* background: #00ffde; */
 }
 
+.hideResponsive {
+  display: none;
+}
+
 
 @media(min-width: 1080px) {
   .wrapper {
@@ -87,10 +90,14 @@ export default {
     width: 8rem;
   }
 
-  .wrapper::after{
+  .wrapper::after {
     height: .5rem;
     width: 8rem;
-    }
+  }
+
+  .hideResponsive {
+    display: block;
+  }
 
 }
 </style>

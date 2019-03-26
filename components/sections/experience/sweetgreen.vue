@@ -1,5 +1,5 @@
 <template>
-  <section id="sweetgreen" class="section no-padding">
+  <Section id="sweetgreen" class="no-padding">
     <job-article :backgroundImage='bg' :title="'Sweetgreen Android App'" :subtitle="'Working by MatterSupply.co'">
       <p>
         I have been working with an amazing team developing the sweetgreen android application
@@ -22,19 +22,21 @@
       </p>
     </job-article>
     <!-- <bar/> -->
-  </section>
+  </Section>
 </template>
 
 <script>
 import Bar from '~/components/Bar.vue'
 import Wrapper from '~/components/Wrapper'
 import JobArticle from '~/components/Article'
+import Section from '~/components/Section'
 
 export default {
   components: {
     Bar,
     Wrapper,
     JobArticle,
+    Section
   },
 
   data() {
@@ -46,10 +48,6 @@ export default {
 
 </script>
 <style scoped>
-
-  p {
-    font-size: 1.5rem;
-  }
 
   ul {
     list-style-type: square;

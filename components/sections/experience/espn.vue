@@ -1,6 +1,11 @@
 <template>
-  <section id="sweetgreen" class="section no-padding">
-    <job-article :backgroundImage="bg" :side="'right'" :title="'Sweetgreen Android App'" :subtitle="'Working by MatterSupply.co'">
+  <Section id="sweetgreen" class="no-padding">
+    <job-article
+      :backgroundImage="bg"
+      :side="'right'"
+      :title="'Sweetgreen Android App'"
+      :subtitle="'Working by MatterSupply.co'"
+    >
       <p>
         I have been working with an amazing team developing the sweetgreen android application
         using React Native as base of our development.
@@ -21,25 +26,27 @@
         </ul>
       </p>
     </job-article>
-    <!-- <bar/> -->
-  </section>
+  </Section>
 </template>
 
 <script>
 import Bar from '~/components/Bar.vue'
 import Wrapper from '~/components/Wrapper'
 import JobArticle from '~/components/Article'
+import Section from '~/components/Section.vue'
 
 export default {
   components: {
     Bar,
     Wrapper,
     JobArticle,
+    Section,
   },
 
   data() {
     return {
-      bg:'https://images.unsplash.com/photo-1498846323785-c40aafaaa4f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1858&q=80'
+      bg: 'https://images.unsplash.com/photo-1486128105845-91daff43f404?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80'
+      // bg:'https://images.unsplash.com/photo-1498846323785-c40aafaaa4f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1858&q=80'
     }
   }
 }
@@ -48,12 +55,18 @@ export default {
 <style scoped>
 
   p {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
   }
 
   ul {
     list-style-type: square;
     padding-left: 2rem;
+  }
+
+  @media (min-width: 1080px) {
+    p {
+      font-size: 1.5rem;
+    }
   }
 
 </style>

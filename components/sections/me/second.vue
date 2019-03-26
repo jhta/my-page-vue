@@ -1,45 +1,42 @@
 <template>
   <div>
-    <section id="gradient" class="section section-2 gradient">
+    <Section id="gradient" class="section-2 gradient">
       <wrapper v-bind:withBorders="true">
-        <h1 class='gradient-effect'>What I do?</h1>
-        <div data-aos="fade"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-easing="ease-in-out" class='text-envolve'>
-          <p
-            class="p2 text-center">
-              Sketch. Create.  Code.  Improve.
-          </p>
+        <div class="second-content">
+          <h1 class='gradient-effect'>What I do?</h1>
+          <div data-aos="fade"
+              data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-duration="500"
+              data-aos-easing="ease-in-out" class='text-envolve'>
+            <p
+              class="p2 text-center">
+                Sketch. Create.  Code.  Improve.
+            </p>
+          </div>
         </div>
-
       </wrapper>
       <bar v-bind:goTo='"#letsWander"'/>
-    </section>
+    </Section>
   </div>
 </template>
 
 <script>
 import Bar from '~/components/Bar.vue'
 import Wrapper from '~/components/Wrapper'
+import Section from '~/components/Section'
 
 export default {
   components: {
     Bar,
     Wrapper,
+    Section,
   },
 }
 </script>
 
 
-<style>
-  p {
-    font-size: 1.5rem;
-    margin: 0;
-    margin-bottom: 1rem;
-  }
-
+<style scoped>
 
   h1 {
     text-align: center;
@@ -60,8 +57,9 @@ export default {
   	-webkit-text-fill-color: transparent;
     padding: .2rem;
     font-weight: bold;
+    font-size: 1rem;
   }
- .gradient {
+  .gradient {
     background: #ff9393;
     /* animation-name: bar; */
     animation-duration: 10s;
@@ -69,8 +67,10 @@ export default {
     animation-iteration-count: infinite;
     background: -webkit-linear-gradient(left, #ff9393 10% , #00ffde,  #ff9393 90%);
     background-size: 200% 100%;
-    /* display: flex; */
-    /* justify-content: center; */
+  }
+
+  .second-content {
+    padding: 3rem 1rem;
   }
 
 
@@ -80,11 +80,8 @@ export default {
     font-size: 8rem;
     line-height: 10rem;
   }
-
-  p {
-    font-size: 1.5rem;
-  }
 }
+
 
 @media (min-width: 1080px) {
   h1 {
@@ -92,14 +89,13 @@ export default {
     line-height: 12rem;
   }
 
-  p {
-    font-size: 2rem;
-  }
-
   .gradient-title {
     padding: 3rem;
     font-size: 15rem;
     line-height: 10rem;
+  }
+  .p2 {
+    font-size: 1.5rem;
   }
 }
 </style>

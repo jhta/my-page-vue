@@ -33,11 +33,7 @@ export default {
 </script>
 
 <style>
-  p {
-    font-size: 1.5rem;
-    margin: 0;
-    margin-bottom: 1rem;
-  }
+
 
   h1 {
     text-align: center;
@@ -81,10 +77,6 @@ export default {
     font-size: 8rem;
     line-height: 10rem;
   }
-
-  p {
-    font-size: 1.5rem;
-  }
 }
 
 @media (min-width: 1080px) {
@@ -93,9 +85,6 @@ export default {
     line-height: 12rem;
   }
 
-  p {
-    font-size: 2rem;
-  }
 
   .gradient-title {
     padding: 3rem;

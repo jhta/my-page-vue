@@ -1,5 +1,5 @@
 <template>
-  <section id='letsWander' class="section bg-black">
+  <Section id='letsWander' class="bg-black">
     <wrapper>
       <h1 data-aos="fade-right"
           data-aos-offset="200"
@@ -9,17 +9,19 @@
     </wrapper>
 
   <bar :background='"black"' :goTo='"#sweetgreen"'></bar>
-  </section>
+  </Section>
 </template>
 
 <script>
 import Bar from '~/components/Bar.vue'
 import Wrapper from '~/components/Wrapper'
+import Section from '~/components/Section'
 
 export default {
   components: {
     Bar,
     Wrapper,
+    Section,
   },
 }
 </script>
@@ -27,9 +29,9 @@ export default {
 <style scoped>
   .gradient-title {
     letter-spacing: .5rem;
-    font-size: 6rem;
+    font-size: 4rem;
     font-style: italic;
-    line-height: 6rem;
+    line-height: 4rem;
     border-bottom: 1rem solid white;
   }
 
@@ -41,6 +43,13 @@ export default {
     padding: .2rem;
     font-weight: bold;
   }
+
+@media (min-width: 1080px) {
+  .gradient-title {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+}
 
 @media (min-width: 1080px) {
   .gradient-title {

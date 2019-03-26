@@ -2,21 +2,21 @@
   <div class="article-wrapper" :class="{ reverse: side === 'right'}">
     <div class="article experience" :class='side' >
       <div class="article-container">
-      <wrapper v-bind:withBorders="true" class='h100'>
-        <div class="job--description c-white">
-          <h3 class="job--title c-white" data-aos='fade' data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-easing="ease-in-out">
-              {{ title }} 
-            <br />
-            <span class='job--tittle--sub c-base'>{{ subtitle }} </span>
-          </h3>
-          <p data-aos='fade'>
-            <slot></slot>
-          </p>
-        </div>
-      </wrapper> 
+        <wrapper v-bind:withBorders="true" class='h100' v-bind:planeResponsive="true">
+          <div class="job--description c-white">
+            <h3 class="job--title c-white" data-aos='fade' data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-duration="500"
+              data-aos-easing="ease-in-out">
+                {{ title }} 
+              <br />
+              <span class='job--tittle--sub c-base'>{{ subtitle }} </span>
+            </h3>
+            <p data-aos='fade'>
+              <slot></slot>
+            </p>
+          </div>
+        </wrapper> 
       </div>
     </div>
     <div class="article-image" :style="{ backgroundImage: 'url('+ backgroundImage +')'}"></div>
@@ -41,19 +41,65 @@ export default {
 
 </script>
 <style scoped>
-
+  .article-wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   .article {
-    height: 100%;
+    min-height: 100%;
     position: relative;
-    width: 60%;
     color: white;
   }
 
-  .article-wrapper {
-    width: 100%;
+
+  .article-container {
+    padding: 1rem;
+    background: black;
     height: 100%;
-    display: flex;
+  }
+
+  .article-image {
+    height: 300px;
+    background: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center; 
+    padding: 0;
+  }
+
+  .job--description {
+    padding: 2rem 0;
+  }
+
+  .job--title {
+    font-size: 2rem;
+    line-height: 2rem;
+    border-bottom: white solid 4px;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .job--tittle--sub {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+
+@media (min-width: 1080px) {
+  .article {
+    width: 60%;
+    height: 100%;
+  }
+
+  .article-wrapper {
+    height: 100%;
+    flex-direction: row;
   }
 
   .article-wrapper.reverse {
@@ -70,13 +116,12 @@ export default {
     height: 100%;
     width: 40%;
     background: white;
-    /* background-image: url(https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center; 
     padding: 0;
- 
   }
+
 
   .job--title {
     font-size: 4rem;
@@ -93,5 +138,8 @@ export default {
   p {
     font-size: 1.5rem;
   }
+
+
+}
 </style>
 
