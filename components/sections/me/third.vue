@@ -2,10 +2,13 @@
   <Section id='letsWander' class="bg-black">
     <wrapper>
       <h1 data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="500"
-          data-aos-easing="ease-in-out" class='p2 gradient-title '>let's wander</h1>
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-out" class='p2 gradient-title '
+      >
+        what i have done?
+        </h1>
     </wrapper>
 
   <bar :background='"black"' :goTo='"#sweetgreen"'></bar>
@@ -55,7 +58,7 @@ export default {
   .gradient-title {
     padding: 3rem;
     font-size: 15rem;
-    line-height: 10rem;
+    line-height: 15rem;
   }
 }
 

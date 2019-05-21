@@ -1,11 +1,11 @@
 <template>
   <Section id="sweetgreen" class="no-padding">
-    <job-article :backgroundImage='bg' :title="'Sweetgreen Android App'" :subtitle="'Working by MatterSupply.co'">
+    <job-article :backgroundImage='bg' :title="'Sweetgreen Android'" :subtitle="'Working for MatterSupply.co (nov 2018 - present)'">
       <p>
         I have been working with an amazing team developing the sweetgreen android application
         using React Native as base of our development.
-        We had done big challenges trying to create the best mobile user experiences, working over the common RN limit,
-        improvint a lot the performance with custom base components, custom screen controllers and great use of the
+        We had done big challenges trying to create the best mobile user experience, working over the common RN limitations,
+        improving a lot the performance with custom base components, custom screen controllers and great use of the
         state managment, making possible the accessibility and the clean navigation.
         <br /><br />
         Our Stack:
@@ -20,6 +20,8 @@
           <li> CI with fastline and appcenter.</li>
         </ul>
       </p>
+        <br/><br/>
+      <a href="https://play.google.com/store/apps/details?id=com.sweetgreen.android.app&hl=en">Download the app</a>
     </job-article>
     <!-- <bar/> -->
   </Section>

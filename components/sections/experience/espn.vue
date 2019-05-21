@@ -1,30 +1,32 @@
 <template>
-  <Section id="sweetgreen" class="no-padding">
+  <Section id="espn" class="no-padding">
     <job-article
       :backgroundImage="bg"
-      :side="'right'"
-      :title="'Sweetgreen Android App'"
-      :subtitle="'Working by MatterSupply.co'"
+      :title="'ESPN'"
+      :subtitle="'Working for Globant (Feb 2017 - Aug 2018)'"
     >
       <p>
-        I have been working with an amazing team developing the sweetgreen android application
-        using React Native as base of our development.
-        We had done big challenges trying to create the best mobile user experiences, working over the common RN limit,
-        improvint a lot the performance with custom base components, custom screen controllers and great use of the
-        state managment, making possible the accessibility and the clean navigation.
+        I worked with a distributed team in Colombia, Argentina, Uruguay and US developing the new version
+        for espn.com frontpage, schedule and diferents leagues a competitions. Our focus was the high Quality,
+        full support for a lot of devices, countries, languages and timezones, also a 90% test coverage and
+        fast rendering for support one of the most visited websites in US. We made a big migration from BackboneJS
+        to a server rendered React/Node arquitecture.
         <br /><br />
         Our Stack:
         <br/><br/>
         <ul>
-          <li>React Native</li>
-          <li>Serverless AWS Lambda as the only endpoint for our GraphQL server.</li>
-          <li>GraphQL for consume, optimize, parse and 'clean' the data.</li>
-          <li>Apollo server and Apollo client, for use GraphQL on server and app.</li>
-          <li>Redux, Reselect and RxJS for make possible the side effects.</li>
-          <li>Our custom theme using Styled components.</li>
-          <li> CI with fastline and appcenter.</li>
+          <li>React</li>
+          <li>Webpack for module bundle managment</li>
+          <li>Our own components playbook</li>
+          <li>State managment with Mobx</li>
+          <li>Our own server proxy for consume third party services (Ads, Analytics, I18N, etc)</li>
+          <li>Our own server render and routing managment with Express</li>
+          <li>Mocha/Chai/Enzyme as expect for unit and integration testing</li>
         </ul>
       </p>
+      <br/><br/>
+      <a href="https://espn.com/">Visit the website</a>
+
     </job-article>
   </Section>
 </template>
