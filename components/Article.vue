@@ -157,7 +157,7 @@ export default {
 }
 
 @media (min-width: 1620px) {
-  p {
+  p, .job--tittle--sub {
     font-size: 1.5rem;
   }
 }
