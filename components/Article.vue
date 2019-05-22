@@ -39,10 +39,17 @@ export default {
   },
   computed: {
     imageStyle: function () {
+      const isMobile = this.windowWidth <= 764
+      const backgroundImage = `url('${this.backgroundImage}')`
+      if (isMobile) {
+        return {
+        backgroundImage,
+        }
+      }
       const startedPoint = Math.round(this.windowWidth * 0.3)
       const startedPointWithSymbol = this.side !== 'right' ? startedPoint : startedPoint * (-1)
       return {
-        backgroundImage: `url('${this.backgroundImage}')`,
+        backgroundImage,
         backgroundPosition: `${startedPointWithSymbol}px 0px` 
       }
     }
@@ -83,7 +90,6 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center; 
-    background-attachment: fixed;
     padding: 0;
   }
 
