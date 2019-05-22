@@ -18,7 +18,7 @@ export default {
 .wrapper {
   margin: 0 auto;
   position: relative;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
 }
 
 .border-top {
@@ -74,10 +74,6 @@ export default {
 }
 
 @media(min-width: 1080px) {
-  .wrapper {
-    padding: 6rem 4rem 6rem 4rem; 
-  }
-
   .border-bottom-right, .border-top-left {
     height: 8rem;
   }
@@ -89,6 +85,11 @@ export default {
   .hideResponsive {
     display: block;
   }
+}
 
+@media(min-width: 1620px) {
+  .wrapper {
+    padding: 6rem 4rem 6rem 4rem; 
+  }
 }
 </style>

@@ -38,6 +38,7 @@ export default {
     line-height: 4rem;
     border-bottom: 1rem solid white;
     font-weight: lighter;
+    font-family: 'Staatliches', cursive ;
   }
 
 
@@ -48,18 +49,18 @@ export default {
     padding: .2rem;
   }
 
-@media (min-width: 1080px) {
+@media (min-width: 764px) {
   .gradient-title {
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 8rem;
+    line-height: 8rem;
   }
 }
 
 @media (min-width: 1080px) {
   .gradient-title {
     padding: 3rem;
-    font-size: 13rem;
-    line-height: 13rem;
+    font-size: 10rem;
+    line-height: 10rem;
   }
 }
 

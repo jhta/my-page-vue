@@ -10,7 +10,7 @@
               data-aos-duration="500"
               data-aos-easing="ease-in-out" class='text-envolve'>
             <p
-              class="p2 text-center">
+              class="secondary-text text-center">
                 Sketch. Create.  Code.  Improve.
             </p>
           </div>
@@ -41,7 +41,8 @@ export default {
   h1 {
     text-align: center;
     margin-bottom: 0rem;
-    font-size: 4rem;
+    font-size: 4.5rem;
+    line-height: 5rem;
     transition: .3s ease-out all;
     margin-top: 0;
     font-family: 'Staatliches', cursive ;
@@ -51,7 +52,7 @@ export default {
     text-shadow:5px 5px 2px #00ffde, -5px -5px 2px #ff9393;
   }
 
-  .p2 {
+  .secondary-text {
     background: -webkit-linear-gradient(left, #ff9393, #00ffde);
     -webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
@@ -78,7 +79,15 @@ export default {
 @media (min-width: 768px) {
   h1 {
     font-size: 8rem;
-    line-height: 10rem;
+    line-height: 8rem;
+  }
+
+  .secondary-text {
+    font-size: 1.5rem;
+  }
+
+  .second-content {
+    padding: 3rem;
   }
 }
 
@@ -89,13 +98,12 @@ export default {
     line-height: 12rem;
   }
 
-  .gradient-title {
-    padding: 3rem;
-    font-size: 15rem;
-    line-height: 10rem;
+  .secondary-text {
+    font-size: 2rem;
   }
-  .p2 {
-    font-size: 1.5rem;
+
+  .second-content {
+    padding: 4rem;
   }
 }
 </style>

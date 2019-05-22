@@ -5,7 +5,7 @@
         <div class="first-content">
           <!-- <h1 class="first-title font-tittle">Jeison Higuita</h1> -->
           <p class="first-text text-center">
-            Hi there, I'm <b class="b-name">Jeison Higuita</b><br />
+            Hi there, I'm <b class="b-name">Jeison Higuita</b>.<br />
             Colombian <b>Software Engineer</b>, Lifelong learner
             and Amateur Photographer based on Amsterdam Currently working at <a target="_blank" href="https://www.cg.nl/">CG</a>.
           </p>
@@ -35,13 +35,6 @@ export default {
 
 
 <style scoped>
-
-
-
-/* .first-text > a:hover {
-  text-shadow:2px 2px 1px #00ffde, -2px -2px 1px #ff9393;
-} */
-
 .first-text {
   font-size: 1.3rem;
   padding-bottom: 2rem;
@@ -60,9 +53,11 @@ export default {
 }
 
 @media (min-width: 1080px) {
+  .first-content {
+    padding: 3rem 2rem;
+  }
   .first-text {
     font-size: 3rem;
-    /* line-height: 5rem; */
     padding-bottom: 3rem;
   }
 }

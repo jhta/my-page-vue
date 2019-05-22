@@ -56,21 +56,9 @@ export default {
 </script>
 
 <style scoped>
-
-  p {
-    font-size: 0.8rem;
-  }
-
   ul {
     list-style-type: square;
     padding-left: 2rem;
   }
-
-  @media (min-width: 1080px) {
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
 </style>
 

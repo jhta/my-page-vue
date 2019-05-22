@@ -43,7 +43,7 @@ export default {
 <style scoped>
   .article-wrapper {
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -52,12 +52,12 @@ export default {
     min-height: 100%;
     position: relative;
     color: white;
+    background: black;
   }
 
 
   .article-container {
     padding: 1rem;
-    background: black;
     height: 100%;
   }
 
@@ -83,13 +83,35 @@ export default {
   }
 
   .job--tittle--sub {
-    font-size: 1rem;
-  }
-
-  p {
     font-size: 0.8rem;
   }
 
+  p {
+    font-size: 1rem;
+  }
+
+
+@media (min-width: 764px) {
+  .experience {
+    flex-grow: 2;
+  }
+
+  .article-image {
+    height: 400px;
+  }
+
+  .article-container {
+    padding: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .job--description {
+    padding: 2rem 1rem;
+  }
+}
 
 @media (min-width: 1080px) {
   .article {
@@ -104,12 +126,6 @@ export default {
 
   .article-wrapper.reverse {
     flex-direction: row-reverse;
-  }
-
-  .article-container {
-    padding: 2rem;
-    background: black;
-    height: 100%;
   }
 
   .article-image {
@@ -135,11 +151,15 @@ export default {
     font-size: 1rem;
   }
 
+  .job--description {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (min-width: 1620px) {
   p {
     font-size: 1.5rem;
   }
-
-
 }
 </style>
 
