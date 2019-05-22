@@ -819,6 +819,12 @@
   dependencies:
     consola "^2.3.0"
 
+"@nuxtjs/google-analytics@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.2.0.tgz#4b2072824961974109eb0bff6a95591fea92c6d9"
+  dependencies:
+    vue-analytics "^5.16.2"
+
 "@nuxtjs/opencollective@^0.2.0":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/opencollective/-/opencollective-0.2.1.tgz#ddf3e6a22990997322bc2b82e2455a7fbffc518d"
@@ -7826,6 +7832,10 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+vue-analytics@^5.16.2:
+  version "5.16.4"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.4.tgz#7f9e197cbc64afac96884a05214b17efaf8e9d09"
 
 vue-eslint-parser@^4.0.2:
   version "4.0.3"

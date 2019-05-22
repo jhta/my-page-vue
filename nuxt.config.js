@@ -44,10 +44,14 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    ,
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    "@nuxtjs/bulma"
+    "@nuxtjs/bulma",
+    "@nuxtjs/google-analytics"
   ],
+
+  googleAnalytics: {
+    id: "UA-59147065-3"
+  },
 
   /*
    ** Build configuration
