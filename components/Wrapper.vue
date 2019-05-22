@@ -22,22 +22,20 @@ export default {
 }
 
 .border-top {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
   height: .5rem;
-  width: 6rem;
+  width: 4rem;
   background: -webkit-linear-gradient(left, #00ffde, #ff9393);
 }
 
 .border-bottom {
-  content: '';
   position: absolute;
   bottom: 0;
   right: 0;
   height: .5rem;
-  width: 6rem;
+  width: 4rem;
   /* background:  #ff9393; */
   background: black;
   background: -webkit-linear-gradient(right, #ff9393, #00ffde);
@@ -46,9 +44,8 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  height: 6rem;
+  height: 4rem;
   width: .5rem;
-  background:  #ff9393;
   background: #00ffde;
 }
 
@@ -58,40 +55,34 @@ export default {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 6rem;
+  height: 4rem;
   width: .5rem;
-  /* background:  #ff9393; */
   background:  #ff9393;
-  /* background: #00ffde; */
 }
 
 .hideResponsive {
   display: none;
 }
+@media(min-width: 768px) {
+  .border-bottom-right, .border-top-left {
+    height: 6rem;
+  }
 
+  .border-top, .border-bottom {
+    width: 6rem;
+  }
+}
 
 @media(min-width: 1080px) {
   .wrapper {
     padding: 6rem 4rem 6rem 4rem; 
   }
 
-  .border-bottom-right {
+  .border-bottom-right, .border-top-left {
     height: 8rem;
-    width: .5rem;
   }
 
-  .border-top-left{
-    height: 8rem;
-    width: .5rem;
-  }
-
-  .wrapper::before {
-    height: .5rem;
-    width: 8rem;
-  }
-
-  .wrapper::after {
-    height: .5rem;
+  .border-bottom, .border-top {
     width: 8rem;
   }
 

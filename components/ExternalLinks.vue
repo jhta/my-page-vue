@@ -56,7 +56,6 @@ export default {
     display: flex;
     margin: 0;
     list-style: none;
-    justify-content: center;
   }
 
   .link-list > li {
@@ -67,9 +66,21 @@ export default {
     padding-right: 0;
   }
 
-  @media (min-width: 1080px) {
+
+  @media(min-width: 768px) {
     .external-link {
-    font-size: 1.5rem;
+      padding: .5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .link-list > li {
+      padding-right: 1.5rem;
+    }
+    .external-link {
+      font-size: 2.5rem;
+      padding: .5rem;
     }
   }
 

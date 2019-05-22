@@ -5,9 +5,10 @@
         data-aos-offset="200"
         data-aos-delay="50"
         data-aos-duration="500"
-        data-aos-easing="ease-in-out" class='p2 gradient-title '
+        data-aos-easing="ease-in-out"
+        class="title gradient-title"
       >
-        what i have done?
+        what have I code?
         </h1>
     </wrapper>
 
@@ -30,21 +31,21 @@ export default {
 </script>
 
 <style scoped>
-  .gradient-title {
+  .title {
     letter-spacing: .5rem;
     font-size: 4rem;
     font-style: italic;
     line-height: 4rem;
     border-bottom: 1rem solid white;
+    font-weight: lighter;
   }
 
 
-  .p2 {
+  .gradient-title {
     background: -webkit-linear-gradient(left, #ff9393, #00ffde);
     -webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
     padding: .2rem;
-    font-weight: bold;
   }
 
 @media (min-width: 1080px) {
@@ -57,8 +58,8 @@ export default {
 @media (min-width: 1080px) {
   .gradient-title {
     padding: 3rem;
-    font-size: 15rem;
-    line-height: 15rem;
+    font-size: 13rem;
+    line-height: 13rem;
   }
 }
 

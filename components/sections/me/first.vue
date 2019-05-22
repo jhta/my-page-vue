@@ -3,12 +3,16 @@
     <Section>
       <wrapper v-bind:withBorders="true">
         <div class="first-content">
-          <h1 class="first-title font-tittle">Jeison Higuita</h1>
-          <p class="first-text text-center"> Software Developer, Lifelong learner and Traveler.</p>
+          <!-- <h1 class="first-title font-tittle">Jeison Higuita</h1> -->
+          <p class="first-text text-center">
+            Hi there, I'm <b class="b-name">Jeison Higuita</b><br />
+            Colombian <b>Software Engineer</b>, Lifelong learner
+            and Amateur Photographer based on Amsterdam Currently working at <a target="_blank" href="https://www.cg.nl/">CG</a>.
+          </p>
         <external-links></external-links>
         </div>
       </wrapper>
-    <bar :whiteArrow='true' :isGradient='true' :goTo='"#gradient"'></bar>
+      <bar :whiteArrow='true' :isGradient='true' :goTo='"#gradient"'></bar>
     </Section>
   </div>
 </template>
@@ -30,47 +34,36 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 
 
-h1 {
-  text-align: center;
-  margin-bottom: 0rem;
-  font-size: 4rem;
-  transition: .3s ease-out all;
-  margin-top: 0;
-}
 
-.gradient-effect, .first-title:hover {
-  text-shadow:5px 5px 2px #00ffde, -5px -5px 2px #ff9393;
-}
+/* .first-text > a:hover {
+  text-shadow:2px 2px 1px #00ffde, -2px -2px 1px #ff9393;
+} */
 
 .first-text {
-  font-size: 1rem;
-  padding-bottom: 1rem;
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+  text-align: left;
 }
 
 .first-content {
-  padding: 2rem 1rem;
+  max-width: 1080px;
+  padding: 3rem 1rem;
 }
- 
 
 @media (min-width: 768px) {
-  h1 {
-    font-size: 8rem;
-    line-height: 10rem;
+  .first-text {
+    font-size: 2.4rem;
   }
-
 }
 
 @media (min-width: 1080px) {
-  h1 {
-    font-size: 10rem;
-    line-height: 12rem;
-  }
-
   .first-text {
-    font-size: 2rem;
+    font-size: 3rem;
+    /* line-height: 5rem; */
+    padding-bottom: 3rem;
   }
 }
 </style>
