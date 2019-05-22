@@ -19,7 +19,7 @@
         </wrapper> 
       </div>
     </div>
-    <div class="article-image" :style="{ backgroundImage: 'url('+ backgroundImage +')'}"></div>
+    <div class="article-image" :style="imageStyle"></div>
   </div>
 </template>
 
@@ -28,11 +28,27 @@ import VueTypes from 'vue-types'
 import Wrapper from '~/components/Wrapper'
 
 export default {
- props: {
+  props: {
     side: VueTypes.oneOf(['left', 'right']).def('left'),
     title: VueTypes.string,
     subtitle: VueTypes.string, 
     backgroundImage: VueTypes.string,
+  },
+  data() {
+    return { windowWidth: 0}
+  },
+  computed: {
+    imageStyle: function () {
+      const startedPoint = Math.round(this.windowWidth * 0.3)
+      const startedPointWithSymbol = this.side !== 'right' ? startedPoint : startedPoint * (-1)
+      return {
+        backgroundImage: `url('${this.backgroundImage}')`,
+        backgroundPosition: `${startedPointWithSymbol}px 0px` 
+      }
+    }
+  },
+  mounted() {
+    this.windowWidth = window.innerWidth
   },
   components: {
     Wrapper,
@@ -67,6 +83,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center; 
+    background-attachment: fixed;
     padding: 0;
   }
 
@@ -135,6 +152,8 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center; 
+    background-attachment: fixed;
+    background-position-x: 800px;
     padding: 0;
   }
 
