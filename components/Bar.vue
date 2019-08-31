@@ -1,9 +1,9 @@
 <template>
   <div class="bar" v-bind:class="{'bg-gradient': Boolean(isGradient) }">
     <down-arrows
-      v-bind:whiteArrow='whiteArrow'
-      v-bind:whiteChilds='background === "black"'
-      v-bind:goTo='goTo'
+      :whiteArrow='whiteArrow'
+      :whiteChilds='background === "black"'
+      :goTo='goTo'
     />
   </div>
 </template>
@@ -32,6 +32,7 @@ export default {
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 1000;
     /* background: #ff9393; */
   
   }

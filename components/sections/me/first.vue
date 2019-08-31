@@ -12,7 +12,7 @@
         <external-links></external-links>
         </div>
       </wrapper>
-      <bar :whiteArrow='true' :isGradient='true' :goTo='"#gradient"'></bar>
+      <bar :whiteArrow='true' :goTo='"#gradient"'></bar>
     </Section>
   </div>
 </template>

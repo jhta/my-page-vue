@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper-2">
     <Section id="gradient" class="section-2 gradient">
       <wrapper v-bind:withBorders="true">
         <div class="second-content">
@@ -48,6 +48,14 @@ export default {
     font-family: 'Staatliches', cursive ;
   }
 
+  .section-2 {
+    top: -2rem;
+  }
+
+  .wrapper-2 {
+    margin-bottom: -2rem;
+  }
+
   .gradient-effect, .first-title:hover {
     text-shadow:5px 5px 2px #00ffde, -5px -5px 2px #ff9393;
   }
@@ -60,14 +68,27 @@ export default {
     font-weight: bold;
     font-size: 1rem;
   }
+
+  @keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
   .gradient {
     background: #ff9393;
-    /* animation-name: bar; */
-    animation-duration: 10s;
-    animation-delay: 1s;
+    animation-name: gradientBG;
+    animation-duration: 6s;
+    /* animation-delay: 1s; */
     animation-iteration-count: infinite;
-    background: -webkit-linear-gradient(left, #ff9393 10% , #00ffde,  #ff9393 90%);
-    background-size: 200% 100%;
+    background: -webkit-linear-gradient(-20deg, #ff9393 10%,#40E4CB, #00ffde, #ff9393 90%);
+    /* background: -webkit-linear-gradient(left, #ff9393, #00ffde); */
+    background-size: 400% 400%;
   }
 
   .second-content {

@@ -18,6 +18,10 @@ module.exports = {
       {
         href: "https://fonts.googleapis.com/css?family=Roboto:700|Staatliches",
         rel: "stylesheet"
+      },
+      {
+        href: "https://fonts.googleapis.com/css?family=Ubuntu&display=swap",
+        rel: "stylesheet"
       }
     ]
   },
