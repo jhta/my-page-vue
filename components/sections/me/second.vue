@@ -61,7 +61,8 @@ export default {
   }
 
   .secondary-text {
-    background: -webkit-linear-gradient(left, #ff9393, #00ffde);
+    /* background: -webkit-linear-gradient(left, #ff9393, #00ffde); */
+    background-color: #00ffde;
     -webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
     padding: .2rem;

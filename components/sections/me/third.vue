@@ -34,7 +34,7 @@ export default {
   .title {
     letter-spacing: .5rem;
     font-size: 4rem;
-    font-style: italic;
+    /* font-style: italic; */
     line-height: 4rem;
     border-bottom: 1rem solid white;
     font-weight: lighter;

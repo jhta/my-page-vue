@@ -21,7 +21,9 @@
         </ul>
       </p>
       <br/><br/>
-      <a href="https://justdoit.nike.com/">Visit the website</a>
+      <div class="gradient button--cover">
+        <a class="link" href="https://justdoit.nike.com/">Visit the website</a>
+      </div>
     </job-article>
     <!-- <bar/> -->
   </Section>
@@ -55,5 +57,16 @@ export default {
     list-style-type: square;
     padding-left: 2rem;
   }
+
+.link {
+  background: black;
+  color: white;
+  padding: .5rem;
+}
+
+.button--cover {
+  padding: .5rem .2rem .5rem .2rem;
+  display: inline-block;
+}
 </style>
 
