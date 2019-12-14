@@ -8,7 +8,7 @@
         data-aos-easing="ease-in-out"
         class="title gradient-title"
       >
-        what have I code?
+        let's look around.
         </h1>
     </wrapper>
 

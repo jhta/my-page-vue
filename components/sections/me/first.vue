@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div class="bg-white">
     <Section>
       <wrapper v-bind:withBorders="true">
         <div class="first-content">
           <!-- <h1 class="first-title font-tittle">Jeison Higuita</h1> -->
-          <p class="first-text text-center">
-            Hi there, I'm <b class="b-name">Jeison Higuita</b>.<br />
-            Colombian <b>Software Engineer</b>, Lifelong learner
-            and Amateur Photographer based on Amsterdam Currently working at <a target="_blank" href="https://www.cg.nl/">CG</a>.
-          </p>
+          <div class="first-text text-center">
+            <h1>Hi there, I'm <b class="b-name">Jeison Higuita</b>.</h1>
+            <h2>Colombian <b>Software Engineer</b>, Lifelong learner
+            and Amateur Photographer based on Amsterdam Currently working at <a target="_blank" href="https://www.cg.nl/">recharge.com</a>.</h2>
+          </div>
         <external-links></external-links>
         </div>
       </wrapper>
@@ -19,7 +19,7 @@
 
 <script>
 import Bar from '~/components/Bar.vue'
-import ExternalLinks from  '~/components/ExternalLinks'
+import ExternalLinks from '~/components/ExternalLinks'
 import Wrapper from '~/components/Wrapper'
 import Section from '~/components/Section'
 
@@ -39,6 +39,10 @@ export default {
   font-size: 1.3rem;
   padding-bottom: 2rem;
   text-align: left;
+}
+
+.bg-white {
+  background: white;
 }
 
 .first-content {

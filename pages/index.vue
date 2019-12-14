@@ -17,11 +17,11 @@ import MeFirst from '~/components/sections/me/first'
 import MeSecond from '~/components/sections/me/second'
 import MeThird from '~/components/sections/me/third'
 
-import Sweetgreen from '~/components/sections/experience/sweetgreen'
-import Espn from '~/components/sections/experience/espn'
-import Nike from '~/components/sections/experience/nike'
-import Platzi from '~/components/sections/experience/platzi'
-import Workep from '~/components/sections/experience/workep'
+const Sweetgreen = () => import('~/components/sections/experience/sweetgreen')
+const Espn = () => import('~/components/sections/experience/espn')
+const Nike = () => import('~/components/sections/experience/nike')
+const Platzi = () => import('~/components/sections/experience/platzi')
+const Workep = () => import('~/components/sections/experience/workep')
 
 import UiFooter from '~/components/sections/footer'
 
