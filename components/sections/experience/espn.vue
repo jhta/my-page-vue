@@ -49,7 +49,7 @@ export default {
 
   data() {
     return {
-      bg: 'https://images.unsplash.com/photo-1486128105845-91daff43f404?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80'
+      bg: 'https://images.unsplash.com/photo-1486128105845-91daff43f404?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&q=80'
       // bg:'https://images.unsplash.com/photo-1498846323785-c40aafaaa4f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1858&q=80'
     }
   }

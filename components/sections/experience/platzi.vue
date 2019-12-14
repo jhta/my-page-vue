@@ -50,7 +50,7 @@ export default {
 
   data() {
     return {
-      bg: 'https://images.unsplash.com/photo-1503444200347-fa86187a2797?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3900&q=80'
+      bg: 'https://images.unsplash.com/photo-1503444200347-fa86187a2797?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&q=80'
     }
   }
 }

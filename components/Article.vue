@@ -35,12 +35,12 @@ export default {
     backgroundImage: VueTypes.string,
   },
   data() {
-    return { windowWidth: 0}
+    return { windowWidth: 250 }
   },
   computed: {
     imageStyle: function () {
       const isMobile = this.windowWidth <= 764
-      const backgroundImage = `url('${this.backgroundImage}')`
+      const backgroundImage = `url('${this.backgroundImage}&w=${this.windowWidth}')`
       if (isMobile) {
         return {
         backgroundImage,
