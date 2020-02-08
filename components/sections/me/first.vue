@@ -7,7 +7,7 @@
           <div class="first-text text-center">
             <h1>Hi there, I'm <b class="b-name">Jeison Higuita</b>.</h1>
             <h2>Colombian <b>Software Engineer</b>, Lifelong learner
-            and Amateur Photographer based on Amsterdam Currently working at <a target="_blank" href="https://www.cg.nl/">recharge.com</a>.</h2>
+            and Amateur Photographer based on Amsterdam, currently working at <a target="_blank" href="https://www.cg.nl/">recharge.com</a>.</h2>
           </div>
         <external-links></external-links>
         </div>
@@ -61,7 +61,7 @@ export default {
     padding: 3rem 2rem;
   }
   .first-text {
-    font-size: 3rem;
+    font-size: 2.8rem;
     padding-bottom: 3rem;
   }
 }
