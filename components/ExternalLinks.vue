@@ -1,7 +1,9 @@
 <template>
   <ul class='link-list'>
     <li v-for="link in links" v-bind:key="link.title">
-      <a class='external-link' target="_blank" :href="'https://' + link.url">{{ link.title }}</a>
+      <div class="external-link--cover">
+        <a class='external-link' target="_blank" :href="'https://' + link.url">{{ link.title }}</a>
+      </div>
     </li>
   </ul>
 </template>
@@ -42,13 +44,21 @@ export default {
     color: #4a4a4a;
     cursor: pointer;
     padding: 4px;
-    background: rgba(0,0,0,0.2);
+    background: #eee;
+    transition: all ease 0.4s;
+    -webkit-transition: all ease 0.4s;
+  }
 
+  .external-link--cover {
+    padding-bottom: .3rem;
+    background: #ff9393;
+    background: -webkit-linear-gradient(left, #ff9393 , #00ffde)
   }
 
   .external-link:hover {
     background: #ff9393;
-    background: -webkit-linear-gradient(left, #ff9393 , #00ffde)
+    background: -webkit-linear-gradient(left, #ff9393 , #00ffde);
+    /* transition: all ease-in 0.4s; */
   }
 
   .link-list {

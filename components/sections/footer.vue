@@ -1,7 +1,11 @@
 <template>
-  <footer class="footer gradient">
+  <footer class="gradient">
+    <div class="footer">
       <external-links />
+    </div>
+    <div class="copyright">
       <p>me@jeison.xyz</p>
+    </div>
   </footer>
 </template>
 
@@ -26,11 +30,31 @@ export default {
 <style scoped>
 
 footer {
+  height: 20rem;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.footer {
   width: 100%;
   flex-direction: column;
   align-items: center;
   display: flex;
-  height: 10rem;
+  width: 100%;
+  height: 15rem;
+  background: transparent;
+}
+
+.copyright {
+  width: 100%;
+  border-top: 4px solid black;
+  height: 5rem;
+  font-size: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+ 
 }
 
 p {
