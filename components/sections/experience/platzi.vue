@@ -26,9 +26,7 @@
         </ul>
       </p>
         <br/><br/>
-      <div class="gradient button--cover">
-        <a class="link" href="https://platzi.com/">Visit the website</a>
-      </div>
+      <Button link="https://platzi.com/" text="Visit the website" />
     </job-article>
     <!-- <bar/> -->
   </Section>
@@ -36,6 +34,7 @@
 
 <script>
 import Bar from '~/components/Bar.vue'
+import Button from '~/components/Button.vue'
 import Wrapper from '~/components/Wrapper'
 import JobArticle from '~/components/Article'
 import Section from '~/components/Section'
@@ -45,7 +44,8 @@ export default {
     Bar,
     Wrapper,
     JobArticle,
-    Section
+    Section,
+    Button,
   },
 
   data() {
@@ -63,16 +63,5 @@ export default {
     padding-left: 2rem;
   }
 
-
-.link {
-  background: black;
-  color: white;
-  padding: .5rem;
-}
-
-.button--cover {
-  padding: .5rem .2rem .5rem .2rem;
-  display: inline-block;
-}
 </style>
 
