@@ -23,11 +23,6 @@ module.exports = {
       {
         href: "https://fonts.googleapis.com/css?family=Ubuntu&display=swap",
         rel: "stylesheet"
-      },
-      {
-        href:
-          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap",
-        rel: "stylesheet"
       }
     ]
   },
@@ -56,7 +51,8 @@ module.exports = {
   modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     "@nuxtjs/bulma",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/google-analytics",
+    "@nuxtjs/pwa"
   ],
 
   googleAnalytics: {
