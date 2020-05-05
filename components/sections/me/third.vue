@@ -1,53 +1,53 @@
 <template>
-  <Section id='letsWander' class="bg-black">
+  <Section id="letsWander" class="bg-black">
     <wrapper>
-      <h1 data-aos="fade-right"
+      <h1
+        data-aos="fade-right"
         data-aos-offset="200"
         data-aos-delay="50"
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
         class="title gradient-title"
-      >
-        let's look around.
-        </h1>
+      >let's look around.</h1>
     </wrapper>
 
-  <bar :background='"black"' :goTo='"#sweetgreen"'></bar>
+    <bar background="black" goTo="#sweetgreen"></bar>
   </Section>
 </template>
 
 <script>
-import Bar from '~/components/Bar.vue'
-import Wrapper from '~/components/Wrapper'
-import Section from '~/components/Section'
+import Bar from "~/components/Bar.vue";
+import Wrapper from "~/components/Wrapper";
+import Section from "~/components/Section";
 
 export default {
   components: {
     Bar,
     Wrapper,
-    Section,
-  },
-}
+    Section
+  }
+};
 </script>
 
 <style scoped>
-  .title {
-    letter-spacing: .5rem;
-    font-size: 4rem;
-    /* font-style: italic; */
-    line-height: 4rem;
-    border-bottom: 1rem solid white;
-    font-weight: lighter;
-    font-family: 'Staatliches', cursive ;
-  }
+.title {
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+  /* font-style: italic; */
+  line-height: 4rem;
+  border-bottom: 1rem solid white;
+  font-weight: lighter;
+  font-family: "Staatliches", cursive;
+}
 
-
-  .gradient-title {
-    background: -webkit-linear-gradient(left, #ff9393, #00ffde);
-    -webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-    padding: .2rem;
-  }
+.gradient-title {
+  /* text-shadow: -2px -2px 2px #ff9393; */
+  /* border: 1px solid black; */
+  background: -webkit-linear-gradient(left, #ff9393, #00ffde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0.2rem;
+}
 
 @media (min-width: 764px) {
   .gradient-title {
@@ -63,6 +63,5 @@ export default {
     line-height: 10rem;
   }
 }
-
 </style>
 

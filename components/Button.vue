@@ -6,23 +6,25 @@
 
 <script>
 export default {
-  props: ['text', 'link']
-}
+  props: ["text", "link"]
+};
 </script>
 
 <style scoped>
 .button--cover {
-  padding: .5rem .2rem .5rem .2rem;
+  padding: 0.5rem 0.2rem 0.5rem 0.2rem;
   display: inline-block;
 }
 
-
+.button-cover:hover > .button--content {
+  color: black !important;
+}
 
 .button--content {
   background: black;
   color: white;
-  padding: .5rem;
-  transition: all ease-in .3s;
+  padding: 0.5rem;
+  transition: all ease-in 0.3s;
 }
 
 .button--content:hover {
@@ -34,5 +36,4 @@ export default {
 .button--content:active {
   font-weight: bold;
 }
-
 </style>

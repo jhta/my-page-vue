@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: "Jeison Higuita",
+    title: "Jeison Higuita, Software Engineer",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -22,6 +22,11 @@ module.exports = {
       },
       {
         href: "https://fonts.googleapis.com/css?family=Ubuntu&display=swap",
+        rel: "stylesheet"
+      },
+      {
+        href:
+          "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap",
         rel: "stylesheet"
       }
     ]

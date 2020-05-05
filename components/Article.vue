@@ -1,22 +1,26 @@
 <template>
   <div class="article-wrapper" :class="{ reverse: side === 'right'}">
-    <div class="article experience" :class='side' >
+    <div class="article experience" :class="side">
       <div class="article-container">
-        <wrapper v-bind:withBorders="true" class='h100' v-bind:planeResponsive="true">
-          <div class="job--description c-white">
-            <h3 class="job--title c-white" data-aos='fade' data-aos-offset="200"
+        <wrapper v-bind:withBorders="true" class="h100" v-bind:planeResponsive="true">
+          <div class="job--description c-white h-100">
+            <h3
+              class="job--title c-white"
+              data-aos="fade"
+              data-aos-offset="200"
               data-aos-delay="50"
               data-aos-duration="500"
-              data-aos-easing="ease-in-out">
-                {{ title }} 
-              <br />
-              <span class='job--tittle--sub c-base'>{{ subtitle }} </span>
+              data-aos-easing="ease-in-out"
+            >
+              {{ title }}
+              <br>
+              <span class="job--tittle--sub c-base">{{ subtitle }}</span>
             </h3>
-            <p data-aos='fade'>
+            <p data-aos="fade">
               <slot></slot>
             </p>
           </div>
-        </wrapper> 
+        </wrapper>
       </div>
     </div>
     <div class="article-image" :style="imageStyle"></div>
@@ -24,95 +28,93 @@
 </template>
 
 <script>
-import VueTypes from 'vue-types'
-import Wrapper from '~/components/Wrapper'
+import VueTypes from "vue-types";
+import Wrapper from "~/components/Wrapper";
 
 export default {
   props: {
-    side: VueTypes.oneOf(['left', 'right']).def('left'),
+    side: VueTypes.oneOf(["left", "right"]).def("left"),
     title: VueTypes.string,
-    subtitle: VueTypes.string, 
-    backgroundImage: VueTypes.string,
+    subtitle: VueTypes.string,
+    backgroundImage: VueTypes.string
   },
   data() {
-    return { windowWidth: 250 }
+    return { windowWidth: 250 };
   },
   computed: {
-    imageStyle: function () {
-      const isMobile = this.windowWidth <= 764
-      const backgroundImage = `url('${this.backgroundImage}&w=${this.windowWidth}')`
+    imageStyle() {
+      const isMobile = this.windowWidth <= 764;
+      const backgroundImage = `url('${this.backgroundImage}&w=${this.windowWidth}')`;
       if (isMobile) {
         return {
-        backgroundImage,
-        }
+          backgroundImage
+        };
       }
-      const startedPoint = Math.round(this.windowWidth * 0.3)
-      const startedPointWithSymbol = this.side !== 'right' ? startedPoint : startedPoint * (-1)
+      const startedPoint = Math.round(this.windowWidth * 0.3);
+      const startedPointWithSymbol =
+        this.side !== "right" ? startedPoint : startedPoint * -1;
       return {
         backgroundImage,
-        backgroundPosition: `${startedPointWithSymbol}px 0px` 
-      }
+        backgroundPosition: `${startedPointWithSymbol}px 0px`
+      };
     }
   },
   mounted() {
-    this.windowWidth = window.innerWidth
+    this.windowWidth = window.innerWidth;
   },
   components: {
-    Wrapper,
-  },
-}
-
+    Wrapper
+  }
+};
 </script>
 <style scoped>
-  .article-wrapper {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column-reverse;
-  }
+.article-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
 
-  .article {
-    min-height: 100%;
-    position: relative;
-    color: white;
-    background: black;
-  }
+.article {
+  min-height: 100%;
+  position: relative;
+  color: white;
+  background: black;
+}
 
+.article-container {
+  padding: 1rem;
+  height: 100%;
+}
 
-  .article-container {
-    padding: 1rem;
-    height: 100%;
-  }
+.article-image {
+  height: 300px;
+  background: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  padding: 0;
+}
 
-  .article-image {
-    height: 300px;
-    background: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center; 
-    padding: 0;
-  }
+.job--description {
+  padding: 2rem 0;
+}
 
-  .job--description {
-    padding: 2rem 0;
-  }
+.job--title {
+  font-size: 2rem;
+  line-height: 2rem;
+  border-bottom: white solid 4px;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
 
-  .job--title {
-    font-size: 2rem;
-    line-height: 2rem;
-    border-bottom: white solid 4px;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-  }
+.job--tittle--sub {
+  font-size: 0.8rem;
+}
 
-  .job--tittle--sub {
-    font-size: 0.8rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
+p {
+  font-size: 1rem;
+}
 
 @media (min-width: 764px) {
   .experience {
@@ -157,12 +159,11 @@ export default {
     background: white;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center; 
+    background-position-x: center;
     background-attachment: fixed;
     background-position-x: 800px;
     padding: 0;
   }
-
 
   .job--title {
     font-size: 4rem;
@@ -182,8 +183,9 @@ export default {
 }
 
 @media (min-width: 1620px) {
-  p, .job--tittle--sub {
-    font-size: 1.5rem;
+  p,
+  .job--tittle--sub {
+    font-size: 1.3rem;
   }
 }
 </style>
