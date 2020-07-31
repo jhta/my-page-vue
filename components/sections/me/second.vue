@@ -62,7 +62,6 @@ h1 {
 
 .secondary-text {
   width: 100%;
-  font-family: serif;
   background: -webkit-linear-gradient(left, #ff9393, #00ffde);
   /* background-color: #00ffde; */
   -webkit-background-clip: text;
