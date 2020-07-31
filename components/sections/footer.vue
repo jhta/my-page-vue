@@ -1,8 +1,5 @@
 <template>
   <footer class="gradient">
-    <div class="footer">
-      <external-links/>
-    </div>
     <div class="copyright">
       <p>jeisonhiguitas@2020 - Powered by Nuxt.js</p>
     </div>
@@ -29,7 +26,6 @@ export default {
 
 <style scoped>
 footer {
-  height: 20rem;
   flex-direction: column;
   align-items: center;
   display: flex;
