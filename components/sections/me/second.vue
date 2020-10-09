@@ -3,7 +3,7 @@
     <Section id="gradient" class="section-2 gradient">
       <wrapper v-bind:withBorders="true">
         <div class="second-content">
-          <h1 class="gradient-effect">Work experience</h1>
+          <h1 class="gradient-effect">Career History</h1>
           <div
             data-aos="fade"
             data-aos-offset="200"
@@ -12,11 +12,13 @@
             data-aos-easing="ease-in-out"
             class="text-envolve"
           >
-            <p class="secondary-text text-center">Sketch. Create. Code. Improve.</p>
+            <p class="secondary-text text-center">
+              Sketch. Create. Code. Improve.
+            </p>
           </div>
         </div>
       </wrapper>
-      <bar goTo="#letsWander"/>
+      <bar goTo="#letsWander" />
     </Section>
   </div>
 </template>
@@ -34,7 +36,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 h1 {
@@ -133,4 +134,3 @@ h1 {
   }
 }
 </style>
-
