@@ -7,8 +7,8 @@
 <style>
 html {
   /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', */
-    /* Roboto, 'Helvetica Neue', Arial, sans-serif; */
-  font-family: 'Ubuntu', sans-serif;
+  /* Roboto, 'Helvetica Neue', Arial, sans-serif; */
+  font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -19,16 +19,20 @@ html {
   background: black;
 }
 
-
 body {
   overflow: hidden;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+ul {
+  margin-left: 2rem;
+  list-style: square;
 }
 
 .button--green {
@@ -60,8 +64,6 @@ body {
   background-color: #35495e;
 }
 
-
-
 .h100 {
   height: 100% !important;
 }
@@ -85,7 +87,7 @@ body {
 }
 
 .font-title {
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
 }
 
 .bg-black {
@@ -100,17 +102,20 @@ body {
   padding: 0 !important;
 }
 
+.markdown-body {
+  white-space: pre-wrap;
+}
 
 @keyframes gradientBG {
-0% {
-  background-position: 0% 50%;
-}
-50% {
-  background-position: 100% 50%;
-}
-100% {
-  background-position: 0% 50%;
-}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .gradient {
   background: #ff9393;
@@ -118,9 +123,14 @@ body {
   animation-duration: 6s;
   /* animation-delay: 1s; */
   animation-iteration-count: infinite;
-  background: -webkit-linear-gradient(-20deg, #ff9393 10%,#40E4CB, #00ffde, #ff9393 90%);
+  background: -webkit-linear-gradient(
+    -20deg,
+    #ff9393 10%,
+    #40e4cb,
+    #00ffde,
+    #ff9393 90%
+  );
   /* background: -webkit-linear-gradient(left, #ff9393, #00ffde); */
   background-size: 400% 400%;
 }
-
 </style>

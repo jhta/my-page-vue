@@ -33,11 +33,6 @@ module.exports = {
   loading: { color: "#fff" },
 
   /*
-   ** Global CSS
-   */
-  css: ["~/assets/style.css"],
-
-  /*
    ** Plugins to load before mounting the App
    */
   plugins: [

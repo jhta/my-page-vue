@@ -41,6 +41,8 @@ const HOMEPAGE_QUERY = gql`
       }
     }
     allJobs {
+      id
+      date
       title
       description
       imageUrl

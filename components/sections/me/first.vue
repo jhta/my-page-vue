@@ -30,7 +30,7 @@ export default {
   props: {
     description: String,
     links: {
-      type: Array,
+      type: Object,
       default: () => ({})
     }
   }
