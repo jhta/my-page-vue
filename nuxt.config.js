@@ -42,7 +42,8 @@ module.exports = {
    */
   plugins: [
     { src: "~/plugins/scrollTo", ssr: false },
-    { src: "~/plugins/aos", ssr: false }
+    { src: "~/plugins/aos", ssr: false },
+    { src: "~/plugins/markdown", ssr: true }
   ],
 
   /*

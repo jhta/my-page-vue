@@ -3,26 +3,13 @@
     <Section>
       <wrapper v-bind:withBorders="true">
         <div class="first-content">
-          <!-- <h1 class="first-title font-tittle">Jeison Higuita</h1> -->
           <div class="first-text text-center">
-            <h1>
-              Hi there, I'm
-              <b class="b-name">Jeison Higuita</b>.
-            </h1>
-            <h2>
-              Colombian
-              <b>Software Engineer</b>, Lifelong learner
-              and Amateur Photographer based on Amsterdam, currently working at
-              <a
-                target="_blank"
-                href="https://www.cg.nl/"
-              >recharge.com</a>.
-            </h2>
+            <vue-simple-markdown :source="description" />
           </div>
-          <external-links/>
+          <external-links :links="links.link" />
         </div>
       </wrapper>
-      <bar :whiteArrow="true" goTo="#gradient"></bar>
+      <bar whiteArrow goTo="#gradient" />
     </Section>
   </div>
 </template>
@@ -39,10 +26,16 @@ export default {
     ExternalLinks,
     Wrapper,
     Section
+  },
+  props: {
+    description: String,
+    links: {
+      type: Array,
+      default: () => ({})
+    }
   }
 };
 </script>
-
 
 <style scoped>
 .first-text {
@@ -76,4 +69,3 @@ export default {
   }
 }
 </style>
-

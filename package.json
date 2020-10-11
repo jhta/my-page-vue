@@ -14,7 +14,15 @@
     "@nuxtjs/bulma": "^1.2.1",
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "nuxt": "^2.11.0"
+    "apollo-boost": "^0.4.9",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-link-context": "^1.0.20",
+    "apollo-link-http": "^1.5.17",
+    "cross-fetch": "^3.0.6",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "nuxt": "^2.11.0",
+    "vue-simple-markdown": "^1.1.4"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",

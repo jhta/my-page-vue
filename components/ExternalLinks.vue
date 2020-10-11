@@ -1,8 +1,8 @@
 <template>
   <ul class="link-list">
-    <li v-for="link in links" v-bind:key="link.title">
+    <li v-for="{ url, label } in links" v-bind:key="url">
       <div class="external-link--cover">
-        <a class="external-link" target="_blank" :href="link.url">{{ link.title }}</a>
+        <a class="external-link" target="_blank" :href="url">{{ label }}</a>
       </div>
     </li>
   </ul>
@@ -10,31 +10,14 @@
 
 <script>
 export default {
-  data() {
-    return {
-      links: [
-        {
-          title: "Code",
-          url: "https://github.com/jhta"
-        },
-        {
-          title: "Stories",
-          url: "https://medium.com/@jeisonhiguita"
-        },
-        {
-          title: "Resumé",
-          url: "https://linkedin.com/in/jeisonhiguita"
-        },
-        {
-          title: "Photo",
-          url: "/photo"
-        }
-      ]
-    };
+  props: {
+    links: {
+      type: Array,
+      default: () => ({})
+    }
   }
 };
 </script>
-
 
 <style>
 .external-link {

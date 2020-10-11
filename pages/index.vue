@@ -1,18 +1,19 @@
 <template>
   <div>
-    <me-first/>
-    <me-second/>
-    <me-third/>
-    <sweetgreen/>
-    <nike/>
-    <espn/>
-    <platzi/>
-    <workep/>
-    <ui-footer/>
+    <me-first v-bind="main" />
+    <me-second />
+    <me-third />
+    <sweetgreen />
+    <nike />
+    <espn />
+    <platzi />
+    <workep />
+    <ui-footer :links="main.links.link" />
   </div>
 </template>
 
 <script>
+import { fetchHomePageData } from "~/services/cms";
 import MeFirst from "~/components/sections/me/first";
 import MeSecond from "~/components/sections/me/second";
 import MeThird from "~/components/sections/me/third";
@@ -36,8 +37,9 @@ export default {
     Platzi,
     Workep,
     UiFooter
+  },
+  async asyncData() {
+    return fetchHomePageData();
   }
 };
 </script>
-
-
