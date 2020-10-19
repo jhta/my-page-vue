@@ -1,22 +1,7 @@
-# my-page
+# My Personal Website
 
-> My geometric Nuxt.js project
+[![Netlify Status](https://api.netlify.com/api/v1/badges/68151655-8200-4fd2-9082-70860f60e2c4/deploy-status)](https://app.netlify.com/sites/pedantic-bohr-ef6192/deploys)
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+* Nuxt.js static
+* CI/CD with Netlify
+* Data from DatoCMS Headless CMS
